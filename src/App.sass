@@ -1,23 +1,39 @@
 // dark mode
 $main-bg-dark: hsl(230, 17%, 14%)
+$secondary-bg-dark:hsl(232, 19%, 15%)
 $main-text-dark: hsl(0, 0%, 100%)
 
 //  ligth mode
 $main-bg-light: hsl(0, 0%, 100%)
+$secondary-bg-light: hsl(225, 100%, 98%)
 $main-text-light: hsl(230, 17%, 14%)
 
 html
     font-family: Inter
 
-.ligth
-    background: $main-bg-light
-    color: $main-text-light
+body
+    margin: 0px
+
+.light
+    .Head
+        background: $secondary-bg-light
+
+.light 
+        background: $main-bg-light
+        color: $main-text-light
+
+.dark .Head
+        background: $secondary-bg-dark
 
 .dark
-    background: $main-bg-dark
-    color: $main-text-dark
+        background: $main-bg-dark
+        color: $main-text-dark
+
+.Head 
+    height: 40vh
 
 .container
     max-width: 1200px
     margin: 0 auto
     padding: 0 20px
+

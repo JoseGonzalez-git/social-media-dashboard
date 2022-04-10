@@ -5,8 +5,10 @@ let ToggleButton = () => {
   const [darkMode, setDarkMode] = useState(true);
   return (
     <>
+    
       <ThemeContext.Consumer>
         {({ changeTheme }) => (
+          
           <label className="switch">
             <input
               type="checkbox"

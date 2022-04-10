@@ -2,7 +2,6 @@ import ToggleButton from "./toggleButton";
 import "../styles/header.sass";
 
 let Header = () => {
-
   return (
     <div className="container header">
       <div>
@@ -11,7 +10,10 @@ let Header = () => {
           Total Followers: <span>250,000</span>
         </p>
       </div>
-      <ToggleButton />
+      <div className="DarkMode">
+        <h4>Dark Mode</h4>
+        <ToggleButton />
+      </div>
     </div>
   );
 };
