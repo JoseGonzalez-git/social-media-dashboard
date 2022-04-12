@@ -1,4 +1,5 @@
 import React from 'react';
+import FollowersCard from './components/followersCard';
 import Header from './components/header';
 
 function App() {
@@ -6,6 +7,12 @@ function App() {
     <div className="App">
       <div className="Head">
         <Header />
+      </div>
+      <div className="Body container">
+        <FollowersCard/>
+        <FollowersCard/>
+        <FollowersCard/>
+        <FollowersCard/>
       </div>
     </div>
   );
