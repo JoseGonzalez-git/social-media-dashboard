@@ -5,7 +5,7 @@ import '../styles/followersCard.sass';
 let FollowersCard = ()=> {
     return (
         <>
-            <div className="container-card">
+            <div className="container-card card-border">
                 <div className="card-header">
                 <img src={IconFacebook} alt={'Facebook Icon'}/>
                     <p> @Josegonzalez</p>

@@ -1,15 +1,42 @@
+$card-bg-dark: hsl(228, 28%, 20%)
+$card-bg-light: hsl(227, 47%, 96%)
+$secondary-text-light:hsl(228, 12%, 44%)
+$secondary-text-dark: hsl(228, 34%, 66%)
+
 h1, p
     margin-bottom: 0
+
+.light .card-header
+    p
+        color: $secondary-text-light
+
+.dark .card-header
+    p
+        color: $secondary-text-dark
+
+.light .container-card
+    background-color: $card-bg-light
+
+.dark .container-card
+    background-color: $card-bg-dark
 
 .container-card
     width: 200px
     height: 170px
-    border: 1px solid black
     display: flex
     flex-direction: column
     align-items: center
     padding: 20px
-    border-radius: 10px
+    border-radius: 5px
+
+.container-card:hover
+    cursor: pointer
+
+.light .container-card:hover
+    background-color: hsl(227, 47%, 90%)
+
+.dark .container-card:hover
+    background-color: hsl(230, 28%, 24%)
 
 .card-header
     display: flex
@@ -18,6 +45,8 @@ h1, p
     margin-top: 10px
     p
         margin: 0
+        font-weight: bold
+        font-size: 0.9rem
 
 .card-body 
     display: flex
@@ -28,7 +57,7 @@ h1, p
         margin-top: 15px
     p
         margin-top:0px
-        font-weight: 100
+        font-weight: 200
         letter-spacing: 4px
 
 .card-footer
@@ -38,3 +67,6 @@ h1, p
     margin-top: 20px
     p
         margin-top: 0
+
+.card-border
+    border-top: 2px solid hsl(208, 92%, 53%)
