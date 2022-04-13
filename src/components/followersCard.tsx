@@ -1,10 +1,10 @@
 import "../styles/followersCard.sass";
-import IconFacebook from "../assets/icon-facebook.svg";
 import IconUp from "../assets/icon-up.svg";
 import IconDown from "../assets/icon-down.svg";
 
 interface PropFollowersCard {
   user: string;
+  icon: string | undefined;
   totalFollowers: number;
   typeFollow: string;
   calculatedFollowersByDays: number;
@@ -23,13 +23,14 @@ let FollowersCard = ({
   totalFollowers,
   typeFollow,
   calculatedFollowersByDays,
+  icon,
 }: PropFollowersCard) => {
   let Icon: string[] = isUpOrDown(calculatedFollowersByDays);
   return (
     <>
       <div className="container-card card-border">
         <div className="card-header">
-          <img src={IconFacebook} alt={"Facebook Icon"} />
+          <img src={icon || ''} alt={""} />
           <p> {user}</p>
         </div>
         <div className="card-body">
@@ -38,11 +39,16 @@ let FollowersCard = ({
         </div>
         <div className="card-footer">
           <img src={Icon[0]} alt={Icon[1]} />
-          <p>{calculatedFollowersByDays * -1} Today</p>
+          <p className={calculatedFollowersByDays < 0 ? "down" : "up" }>
+            {calculatedFollowersByDays < 0
+              ? calculatedFollowersByDays * -1  
+              : calculatedFollowersByDays}{' '}
+            Today
+          </p>
         </div>
       </div>
     </>
-		);
+  );
 };
 
 export default FollowersCard;

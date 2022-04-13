@@ -12,7 +12,7 @@
     "typeFollow": "Followers",
     "TotalFollowers": {
       "01-02-2022": 10,
-      "01-01-2022": 13
+      "01-01-2022": 9
     }
   },
   "Twitter": {
@@ -20,7 +20,7 @@
     "typeFollow": "Followers",
     "TotalFollowers": {
       "01-02-2022": 10,
-      "01-01-2022": 30
+      "01-01-2022": 20
     }
   },
   "Youtube": {
@@ -28,7 +28,7 @@
     "typeFollow": "Subscribers",
     "TotalFollowers": {
       "01-02-2022": 10,
-      "01-01-2022": 20
+      "01-01-2022": 10
     }
   }
 }
