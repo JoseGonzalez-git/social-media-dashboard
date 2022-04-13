@@ -1,0 +1,34 @@
+{
+  "Facebook": {
+    "user": "@JoseGonzalez",
+    "typeFollow": "Followers",
+    "TotalFollowers": {
+      "01-02-2022": 10,
+      "01-01-2022": 10
+    }
+  },
+  "Instagram": {
+    "user": "@JoseGonzalez",
+    "typeFollow": "Followers",
+    "TotalFollowers": {
+      "01-02-2022": 10,
+      "01-01-2022": 13
+    }
+  },
+  "Twitter": {
+    "user": "@JoseGonzalez",
+    "typeFollow": "Followers",
+    "TotalFollowers": {
+      "01-02-2022": 10,
+      "01-01-2022": 30
+    }
+  },
+  "Youtube": {
+    "user": "@JoseGonzalez",
+    "typeFollow": "Subscribers",
+    "TotalFollowers": {
+      "01-02-2022": 10,
+      "01-01-2022": 20
+    }
+  }
+}
