@@ -8,6 +8,7 @@ interface PropFollowersCard {
   totalFollowers: number;
   typeFollow: string;
   calculatedFollowersByDays: number;
+  styleSocialNetwork: string | undefined;
 }
 
 let isUpOrDown = (value: number) => {
@@ -24,11 +25,12 @@ let FollowersCard = ({
   typeFollow,
   calculatedFollowersByDays,
   icon,
+  styleSocialNetwork
 }: PropFollowersCard) => {
   let Icon: string[] = isUpOrDown(calculatedFollowersByDays);
   return (
     <>
-      <div className="container-card card-border">
+      <div className={styleSocialNetwork +" container-card"}>
         <div className="card-header">
           <img src={icon || ''} alt={""} />
           <p> {user}</p>

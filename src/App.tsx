@@ -1,4 +1,3 @@
-import React from "react";
 import User from "./utils/user.json";
 import FollowersCard from "./components/followersCard";
 import Header from "./components/header";
@@ -14,20 +13,40 @@ let FollowersToDay = (value: number[]) => {
   return subtraction;
 };
 
-let Icons: { [key: string]: string}= {
-  "Facebook": IconFacebook,
-  "Twitter": IconTwitter,
-  "Instagram": IconInstagram,
-  "Youtube": IconYoutube,
+let Icons: { [key: string]: string } = {
+  Facebook: IconFacebook,
+  Twitter: IconTwitter,
+  Instagram: IconInstagram,
+  Youtube: IconYoutube,
 };
 
-let selectedIcon = (Icon: { [key: string]: string}, socialNetwork:string[],i: number) => {
-  let item = Object.keys(Icon).map((key:string) => {
+let selectedIcon = (
+  Icon: { [key: string]: string },
+  socialNetwork: string[],
+  i: number
+) => {
+  let item = Object.keys(Icon).map((key: string) => {
     if (socialNetwork[i] === key) {
       return Icon[key];
-    }else return '';
-  })
-  return item.find((item: string) => item !== '');
+    } else return "";
+  });
+  return item.find((item: string) => item !== "");
+};
+
+let socialNetworkStyle = (NameSocialNetwork: string) => {
+  let classNetwork = [
+    "card-border-fb",
+    "card-border-tw",
+    "card-border-ig",
+    "card-border-yt",
+  ];
+  if (NameSocialNetwork === "Facebook") {
+    return classNetwork[0];
+  } else if (NameSocialNetwork === "Twitter") {
+    return classNetwork[1];
+  } else if (NameSocialNetwork === "Instagram") {
+    return classNetwork[2];
+  } else return classNetwork[3];
 };
 
 function App() {
@@ -41,17 +60,18 @@ function App() {
           let followersDay: number[] = Object.values(
             socialNetwork.TotalFollowers
           );
-          let NameSocialNetwork= Object.keys(User)
+          let NameSocialNetwork = Object.keys(User);
           return (
             <FollowersCard
               key={i}
               user={socialNetwork.user}
-              icon={selectedIcon(Icons,NameSocialNetwork,i)}
+              icon={selectedIcon(Icons, NameSocialNetwork, i)}
               totalFollowers={Object.values(socialNetwork.TotalFollowers)
                 .map(Number)
                 .reduce((a, b) => a + b, 0)}
               typeFollow={socialNetwork.typeFollow}
               calculatedFollowersByDays={FollowersToDay(followersDay)}
+              styleSocialNetwork={socialNetworkStyle(NameSocialNetwork[i])}
             />
           );
         })}
